@@ -1,0 +1,70 @@
+<!-- <h1>Welcome to {{ hotelName }}</h1> -->
+<!-- <app-header></app-header> -->
+<!-- <app-header></app-header>
+<app-header></app-header>
+<app-header></app-header> -->
+
+<!-- {{ rooms$ | async | json }} -->
+
+<!-- <div>
+  Number of Rooms:
+  <div
+    [ngStyle]="{ color: rooms.availableRooms > 0 ? 'green' : 'red' }"
+    [innerText]="numberOfRooms"
+  ></div>
+</div> -->
+<!-- 
+<div *ngIf="selectedRoom">
+  {{ selectedRoom | json }}
+</div> -->
+
+<!-- <div>
+  <h1>Number of Rooms</h1>
+</div>
+
+<button (click)="toggle()">Toggle</button> -->
+
+<!-- (click)="addRoom()" -->
+<button [routerLink]="'/rooms/add'">Add Room</button>
+
+{{ priceFilter.value | json }}
+<div>
+  <input
+    type="number"
+    class="form-control"
+    placeholder="price"
+    [formControl]="priceFilter"
+  />
+</div>
+
+<div *ngIf="roomsList" [hidden]="hideRooms">
+  <app-rooms-list
+    [title]="title"
+    [rooms]="roomsList"
+    [price]="priceFilter.value"
+    (selectedRoom)="renderRoom($event)"
+  ></app-rooms-list>
+</div>
+<!-- 
+<div *ngIf="rooms$ | async" [hidden]="hideRooms">
+  <app-rooms-list
+    [title]="title"
+    [rooms]="rooms$ | async"
+    (selectedRoom)="renderRoom($event)"
+  ></app-rooms-list>
+</div> -->
+<!-- <div *ngIf="rooms.availableRooms > 0" [hidden]="hideRooms">
+  <app-rooms-list
+    [title]="title"
+    [rooms]="roomsList"
+    (selectedRoom)="renderRoom($event)"
+  ></app-rooms-list>
+</div> -->
+
+<!-- <button (click)="editRoom()">update Room</button> -->
+
+<!-- <button (click)="deleteRoom()">Delete Room</button> -->
+
+<!-- <h1>loaded</h1> -->
+
+<router-outlet></router-outlet>
